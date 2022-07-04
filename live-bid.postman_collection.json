@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "8bcb09b6-d6ee-40c0-b577-c1f3e5c47ef3",
+		"name": "live-bid",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14674944"
+	},
+	"item": [
+		{
+			"name": "get all items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/stock/items",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stock",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"toys 99\",\n    \"price\": \"5464.56\",\n    \"category_uid\": \"819ce6e4f2824a3599313add2497f7fe\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/stock/items",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stock",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update an item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"uid\": \"06337a0994f441fab545d52ee9199b94\",\n    \"name\": \"new name\",\n    \"price\": \"9999\",\n    \"category_uid\": \"category_uid\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/stock/items",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stock",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a bid for an item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": \"546464.56\",\n    \"user_email\": \"omerfdavarci@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/stock/items/<item_uid>/create_bid",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stock",
+						"items",
+						"<item_uid>",
+						"create_bid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/stock/categories",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stock",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Electronics\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/stock/categories",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stock",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all categories with items detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/stock/categories?expand=items",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stock",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "items"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all items in a category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/stock/items?category_id=<category_id>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stock",
+						"items"
+					],
+					"query": [
+						{
+							"key": "category_id",
+							"value": "<category_id>"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all bids for an item",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": \"884.56\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/stock/items/<item_uid>/get_bids",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stock",
+						"items",
+						"<item_uid>",
+						"get_bids"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
