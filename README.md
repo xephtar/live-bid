@@ -14,7 +14,8 @@ The purpose of the application is:
 - [ ] The winner of the auction should be sent a link to purchase the product.
   
  ## To create a scenario
-You should use given postman collection in this repo after run the API project.
+ 
+You should use given [postman collection](https://github.com/xephtar/live-bid/blob/main/live-bid.postman_collection.json) in this repo after run the API project.
 
 ### Basic scenario
 - Create a category or more
