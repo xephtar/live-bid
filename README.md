@@ -13,6 +13,25 @@ The purpose of the application is:
 - [ ] The winner of the auction should be decided who gives the most amount bid
 - [ ] The winner of the auction should be sent a link to purchase the product.
   
+ ## The API
+ 
+API: [here](https://github.com/xephtar/live-bid-api)
+
+- Used Neo4j as database
+- Used Django as framework
+- Used channels for websocket
+
+Detailed instruction is in [readme](https://github.com/xephtar/live-bid-api/blob/main/README.md) file to run
+
+ ## The UI
+ 
+ UI: [here](https://github.com/xephtar/live-bid-ui)
+ 
+ - Used Vue3
+
+Detailed instruction is in [readme](https://github.com/xephtar/live-bid-ui/blob/main/README.md) file to run
+
+ 
  ## To create a scenario
  
 You should use given [postman collection](https://github.com/xephtar/live-bid/blob/main/live-bid.postman_collection.json) in this repo after run the API project.
