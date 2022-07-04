@@ -1,6 +1,8 @@
 
 # Live BID
 
+Users can make an auction bid by viewing the auctioned items on a category basis. The items and categories will be created from admins. There can be another UI for admins.
+
 The purpose of the application is:
 
 - [x] User can list item categories
